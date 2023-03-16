@@ -4,5 +4,5 @@ RUN apt update && \
 WORKDIR /home/admin/boxfuse-sample-java-war-hello
 CMD [ "mvn package" ]
 WORKDIR /home/admin/boxfuse-sample-java-war-hello/target
-RUN cp hello-1.0.war /var/lib/tomcat9/webapps
+CMD ["cp hello-1.0.war /var/lib/tomcat9/webapps"]
 EXPOSE 8080
