@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 RUN apt update && \
     apt install -y -q maven tomcat9
 WORKDIR /home/admin/boxfuse-sample-java-war-hello
