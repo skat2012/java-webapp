@@ -4,5 +4,5 @@ RUN apt update && \
 WORKDIR /home/admin/boxfuse-sample-java-war-hello
 CMD [ "mvn package" ]
 ENV war=*.war
-COPY /home/admin/boxfuse-sample-java-war-hello/target/${war} /var/lib/tomcat9/webapps
+COPY /home/admin/boxfuse-sample-java-war-hello/target/{war} /var/lib/tomcat9/webapps
 EXPOSE 8080
