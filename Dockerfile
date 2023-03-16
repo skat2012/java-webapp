@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q maven tomcat9
+RUN apt update && apt install -y -q maven tomcat9
 CMD ["git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git"]
 CMD ["cd /home/admin/boxfuse-sample-java-war-hello"]
 CMD ["mvn package"]
