@@ -3,6 +3,6 @@ RUN apt update && \
     apt install -y -q maven tomcat9
 WORKDIR /home/admin/boxfuse-sample-java-war-hello
 CMD [ "mvn package" ]
-ENV war=hello-1.0.war
-COPY /home/admin/boxfuse-sample-java-war-hello/target/${war} /var/lib/tomcat9/webapps
+ENV war=/home/admin/boxfuse-sample-java-war-hello/target/.war
+COPY ${war} /var/lib/tomcat9/webapps
 EXPOSE 8080
