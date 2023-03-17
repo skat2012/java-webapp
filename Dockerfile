@@ -1,3 +1,3 @@
-FROM maven
-RUN cd /home/admin/boxfuse-sample-java-war-hello
-RUN mvn clean package
+FROM openjdk:8-jre
+WORKDIR /home/admin/boxfuse-sample-java-war-hello
+RUN mvn package
