@@ -1,3 +1,3 @@
-FROM maven:3.6.3-1
+FROM maven:3.5.2-jdk-8-alpine
 WORKDIR /home/admin/boxfuse-sample-java-war-hello
 RUN mvn package
