@@ -1,3 +1,4 @@
-FROM ubuntu:18.04
-WORKDIR /home/admin/boxfuse-sample-java-war-hello
-CMD [ "mvn", "package" ]
+FROM maven:alpine as build
+ENV HOME=/home/admin/boxfuse-sample-java-war-hello
+WORKDIR $HOME
+RUN mvn package
