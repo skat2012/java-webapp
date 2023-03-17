@@ -1,3 +1,4 @@
-FROM maven:alpine as build
+FROM maven:alpine
 WORKDIR /home/admin/boxfuse-sample-java-war-hello
-RUN mvn --file /home/admin/boxfuse-sample-java-war-hello/pom.xml clean package
+ADD pom.xml
+RUN mvn package
